@@ -13,11 +13,16 @@ export default class App extends Component {
     return (
       <div>
         <h1>Hello StackBlitz!</h1>
-        <a
-          href={`https://robohash.org/${this.state.count}?set=set2&size=180x180`}
+        <button
+          onClick={() => {
+            <img
+              src={`https://robohash.org/${this.state.count}?set=set2&size=180x180`}
+            />;
+          }}
         >
-          images
-        </a>
+          image
+        </button>
+
         {this.state.count}
         <Increment increment={this.Incremental} />
         {/* <button onClick={this.Incremental} /> */}
